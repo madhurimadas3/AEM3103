@@ -1,3 +1,19 @@
+This is a **bold** word, *italics*
+unordered list:
+- Item 1
+- Item 2
+  - Subitem
+
+ordered list: 
+1. Item A
+2. Item B
+
+link : [UMN Website](https://www.umn.edu).
+
+A picture:
+![alternative text](https://images.app.goo.gl/GjkXjw76TVdjAzui7)
+
+
 # Paper Airplane Numerical Study
   Final Project: AEM 3103 Spring 2024
 
