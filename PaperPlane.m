@@ -41,7 +41,8 @@
 %	d) Effect of Further Increase in Initial Velocity
 	xo		=	[3*V;0;H;R];
 	[td,xd]	=	ode23('EqMotion',tspan,xo);
-	
+ 
+%	Plot Figures
 	figure
 	plot(xa(:,4),xa(:,3),xb(:,4),xb(:,3),xc(:,4),xc(:,3),xd(:,4),xd(:,3))
 	xlabel('Range, m'), ylabel('Height, m'), grid
