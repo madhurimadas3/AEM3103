@@ -11,7 +11,7 @@ ordered list:
 link : [UMN Website](https://www.umn.edu).
 
 A picture:
-![alternative text](https://images.app.goo.gl/GjkXjw76TVdjAzui7)
+![alternative text](./figs/figureA.jpg)
 
 
 # Paper Airplane Numerical Study
