@@ -14,10 +14,10 @@
 	LDmax	=	CL / CD;			% Maximum Lift/Drag Ratio
     % Corresponding Flight Path Angle, rad
 	Gam_nom		=	-atan(1 / LDmax);
-    Gam_min        =   -0.5
-    Gam_max        =   0.4
+    Gam_min        =   -0.5;
+    Gam_max        =   0.4;
     % Corresponding Velocity, m/s (Vnom = 3.55)
-	Vnom		=	sqrt(2 * m * g /(rho * S * (CL * cos(Gam) - CD * sin(Gam))));
+	Vnom		=	sqrt((2 * m * g /(rho * S * (CL * cos(Gam_nom) - CD * sin(Gam_nom)))));
 	Vmin        = 2;
     Vmax        = 7.5;
     Alpha	=	CL / CLa;			% Corresponding Angle of Attack, rad
@@ -29,7 +29,7 @@
 	to		=	0;			% Initial time in seconds
 	tf		=	6;			% Final time in seconds
 	tspan	=	[to tf];
-	xo		=	[Vnom;Gam;H;R];
+	xo		=	[Vnom;Gam_nom;H;R];
 	[ta,xnom]	=	ode23('EqMotion',tspan,xo);
 %	amin) Equilibrium Glide at Maximum Lift/Drag Ratio
 	H		=	2;			% Initial height in meters
@@ -37,7 +37,7 @@
 	to		=	0;			% Initial time in seconds
 	tf		=	6;			% Final time in seconds
 	tspan	=	[to tf];
-	xo		=	[Vmin;Gam;H;R];
+	xo		=	[Vmin;Gam_nom;H;R];
 	[ta,xmin]	=	ode23('EqMotion',tspan,xo);
 %	amax) Equilibrium Glide at Maximum Lift/Drag Ratio
 	H		=	2;			% Initial height in meters
@@ -45,7 +45,7 @@
 	to		=	0;			% Initial time in seconds
 	tf		=	6;			% Final time in seconds
 	tspan	=	[to tf];
-	xo		=	[Vmax;Gam;H;R];
+	xo		=	[Vmax;Gam_nom;H;R];
 	[ta,xmax]	=	ode23('EqMotion',tspan,xo);%Graph Height vs Range Case A
 %%	Variations in Flight Path Angle
 %   anom) Equilibrium Glide at Maximum Lift/Drag Ratio
