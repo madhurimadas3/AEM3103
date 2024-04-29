@@ -1,4 +1,4 @@
-%Enter PaperPlane.m Data Points	
+%%  Enter PaperPlane.m Data Points	
     global CL CD S m g rho	
 	S		=	0.017;			% Reference Area, m^2
 	AR		=	0.86;			% Wing Aspect Ratio
@@ -13,24 +13,48 @@
 	CD		=	CDo + K * CL^2;	% Corresponding CD
 	LDmax	=	CL / CD;			% Maximum Lift/Drag Ratio
 	Gam		=	-atan(1 / LDmax);	% Corresponding Flight Path Angle, rad
-    % Corresponding Velocity, m/s
+    % Corresponding Velocity, m/s (Vnom = 3.55)
 	Vnom		=	sqrt(2 * m * g /(rho * S * (CL * cos(Gam) - CD * sin(Gam))));
-	Vmin        = 
-    Vmax        =
+	Vmin        = 2;
+    Vmax        = 7.5;
     Alpha	=	CL / CLa;			% Corresponding Angle of Attack, rad
 	
-%	a) Equilibrium Glide at Maximum Lift/Drag Ratio
-	H		=	2;			% Initial Height, m
-	R		=	0;			% Initial Range, m
-	to		=	0;			% Initial Time, sec
-	tf		=	6;			% Final Time, sec
+%%	Variations in Velocity
+%   anom) Equilibrium Glide at Maximum Lift/Drag Ratio
+	H		=	2;			% Initial height in meters
+	R		=	0;			% Initial range in meters
+	to		=	0;			% Initial time in seconds
+	tf		=	6;			% Final time in seconds
 	tspan	=	[to tf];
-	xo		=	[V;Gam;H;R];
-	[ta,xa]	=	ode23('EqMotion',tspan,xo);
-
-%Graph Height vs Range Case A
+	xo		=	[Vnom;Gam;H;R];
+	[ta,xnom]	=	ode23('EqMotion',tspan,xo);
+%	amin) Equilibrium Glide at Maximum Lift/Drag Ratio
+	H		=	2;			% Initial height in meters
+	R		=	0;			% Initial range in meters
+	to		=	0;			% Initial time in seconds
+	tf		=	6;			% Final time in seconds
+	tspan	=	[to tf];
+	xo		=	[Vmin;Gam;H;R];
+	[ta,xmin]	=	ode23('EqMotion',tspan,xo);
+%	amax) Equilibrium Glide at Maximum Lift/Drag Ratio
+	H		=	2;			% Initial height in meters
+	R		=	0;			% Initial range in meters
+	to		=	0;			% Initial time in seconds
+	tf		=	6;			% Final time in seconds
+	tspan	=	[to tf];
+	xo		=	[Vmax;Gam;H;R];
+	[ta,xmax]	=	ode23('EqMotion',tspan,xo);%Graph Height vs Range Case A
 	figure;
-    %Plot Midpoint
-	plot(xa(:,4),xa(:,3),'k')
+    %Plot 3 Variations in Velocity
+    figure
+    subplot(2,1,1);
+	plot(xnom(:,4),xnom(:,3),'k',xmin(:,4),xmin(:,3),'r',xmax(:,4),xmax(:,3),'g')
     title('Height vs Range')
 	xlabel('Range, m'), ylabel('Height, m'), grid
+    subplot(2,1,2);
+    plot(xnom(:,4),xnom(:,3),'k',xmin(:,4),xmin(:,3),'r',xmax(:,4),xmax(:,3),'g')
+    title('Height vs R')
+	xlabel('Range, m'), ylabel('Height, m'), grid
+
+
+

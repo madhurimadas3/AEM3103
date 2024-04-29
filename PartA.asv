@@ -6,30 +6,45 @@
 	m		=	0.003;			% Mass, kg
 	g		=	9.8;			% Gravitational acceleration, m/s^2
 	rho		=	1.225;			% Air density at Sea Level, kg/m^3	
-	CLa		=	3.141592 * AR/(1 + sqrt(1 + (AR / 2)^2));
-							% Lift-Coefficient Slope, per rad
+	CLa		=	3.141592 * AR/(1 + sqrt(1 + (AR / 2)^2)); % Lift-Coefficient Slope, per rad
 	CDo		=	0.02;			% Zero-Lift Drag Coefficient
-	epsilon	=	1 / (3.141592 * e * AR);% Induced Drag Factor	
-	CL		=	sqrt(CDo / epsilon);	% CL for Maximum Lift/Drag Ratio
-	CD		=	CDo + epsilon * CL^2;	% Corresponding CD
+	K	=	1 / (3.141592 * e * AR); % Induced Drag Factor	
+	CL		=	sqrt(CDo / K);	% CL for Maximum Lift/Drag Ratio
+	CD		=	CDo + K * CL^2;	% Corresponding CD
 	LDmax	=	CL / CD;			% Maximum Lift/Drag Ratio
 	Gam		=	-atan(1 / LDmax);	% Corresponding Flight Path Angle, rad
-	V		=	sqrt(2 * m * g /(rho * S * (CL * cos(Gam) - CD * sin(Gam))));
-							% Corresponding Velocity, m/s
-	Alpha	=	CL / CLa;			% Corresponding Angle of Attack, rad
+    % Corresponding Velocity, m/s (Vnom = 3.55)
+	Vnom		=	sqrt(2 * m * g /(rho * S * (CL * cos(Gam) - CD * sin(Gam))));
+	Vmin        = 2;
+    Vmax        = 7.5;
+    Alpha	=	CL / CLa;			% Corresponding Angle of Attack, rad
 	
-%	a) Equilibrium Glide at Maximum Lift/Drag Ratio
-	H		=	2;			% Initial Height, m
-	R		=	0;			% Initial Range, m
-	to		=	0;			% Initial Time, sec
-	tf		=	6;			% Final Time, sec
+%	anom) Equilibrium Glide at Maximum Lift/Drag Ratio
+	H		=	2;			% Initial height in meters
+	R		=	0;			% Initial range in meters
+	to		=	0;			% Initial time in seconds
+	tf		=	6;			% Final time in seconds
 	tspan	=	[to tf];
-	xo		=	[V;Gam;H;R];
-	[ta,xa]	=	ode23('EqMotion',tspan,xo);
-
-%Graph Height vs Range Case A
+	xo		=	[Vnom;Gam;H;R];
+	[ta,xnom]	=	ode23('EqMotion',tspan,xo);
+%	amin) Equilibrium Glide at Maximum Lift/Drag Ratio
+	H		=	2;			% Initial height in meters
+	R		=	0;			% Initial range in meters
+	to		=	0;			% Initial time in seconds
+	tf		=	6;			% Final time in seconds
+	tspan	=	[to tf];
+	xo		=	[Vmin;Gam;H;R];
+	[ta,xmin]	=	ode23('EqMotion',tspan,xo);
+%	amax) Equilibrium Glide at Maximum Lift/Drag Ratio
+	H		=	2;			% Initial height in meters
+	R		=	0;			% Initial range in meters
+	to		=	0;			% Initial time in seconds
+	tf		=	6;			% Final time in seconds
+	tspan	=	[to tf];
+	xo		=	[Vmax;Gam;H;R];
+	[ta,xmax]	=	ode23('EqMotion',tspan,xo);%Graph Height vs Range Case A
 	figure;
     %Plot Midpoint
-	plot(xa(:,4),xa(:,3),'k')
+	plot(xnom(:,4),xnom(:,3),'k',xmin(:,4),xmin(:,3),'r',xmin(:,4),xmin(:,3),'r')
     title('Height vs Range')
 	xlabel('Range, m'), ylabel('Height, m'), grid
