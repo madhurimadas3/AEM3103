@@ -1,3 +1,6 @@
+clc;
+clear all;
+clear variables;
 % Constants and expected ranges
 num_trajectories = 100;
 t0 = 0;
@@ -11,8 +14,8 @@ range_data = zeros(numel(tspan), num_trajectories);
 % Simulate 100 trajectories with random parameters
 for i = 1:num_trajectories
     % Generate random parameters within expected ranges
-    V_rand = 2 + (7.5 - 2) * rand(1);
-    Gam_rand = -0.5 + (0.4 + 0.5) * rand(1); % Range [-0.5, 0.4]
+    V_rand = 2 + (7.5 - 2) * rand(1); % Interval [+2,+7.5]
+    Gam_rand = -0.5 + (0.4 + 0.5) * rand(1); % Interval [-0.5, 0.4]
     
     % Simulate trajectory
     [t, height, range] = simulate_trajectory(V_rand, Gam_rand, tspan);
