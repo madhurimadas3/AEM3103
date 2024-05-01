@@ -41,7 +41,7 @@ global CL CD S m g rho
    hold on;
    subplot(2,1,1);
    axis equal;
-   grid on;
+   
    
    xlabel('Range (m)'); ylabel('Height (m)'); title('2D Trajectory (Velocity)');
    
@@ -84,13 +84,13 @@ global CL CD S m g rho
 	xo		=	[Vnom;Gam_nom;H;R];
     [ta,xgnom]	= ode23('EqMotion',tspan,xo);
 
-    % Plotting trajectory 
+   % Plotting trajectory 
    hold on;
    axis equal;
-   grid on;
+   
    subplot(2,1,2);
-    xlabel('Range (m)'); ylabel('Height (m)'); title('2D Trajectory(FPA)');
-    h3 = animatedline('Color','k');
+   xlabel('Range (m)'); ylabel('Height (m)'); title('2D Trajectory(FPA)');
+   h3 = animatedline('Color','k');
 
    % Animating trajectory
    for c = 1:length(xgnom)
@@ -118,5 +118,5 @@ global CL CD S m g rho
    end
 
    % legend 
-   legend('Nominal Gam','Gam = 0.4 rad');
+   legend('Nominal Gam','Gams = 0.4 rad');
    hold off;
