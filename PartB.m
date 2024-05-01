@@ -29,7 +29,7 @@ tspan = linspace(t0, tf, 100); % 100 steps for simulation
 % Arrays to store trajectories
 height_data = zeros(numel(tspan), num_trajectories);
 range_data = zeros(numel(tspan), num_trajectories);
-
+time_data = zeros(numel(tspan),num_trajectories);
 % Simulating 100 trajectories with random parameters
 for i = 1:num_trajectories
     % Generating random parameters within expected ranges
@@ -47,7 +47,8 @@ for i = 1:num_trajectories
     height_data(:, i) = height;
     range = xn(:,4);
     range_data(:, i) = range;
-    
+    time_data (:,i) = tspan;
+
     % Plotting individual trajectory
     plot(range, height, 'b', 'LineStyle', '-', 'LineWidth', 0.5);
     title('Height vs Range')
@@ -61,13 +62,22 @@ end
 [t_nominal, y] = ode23('EqMotion',tspan,xo);
 range_nominal = y(:,4);
 height_nominal = y(:,3);
-plot(range_nominal, height_nominal, 'k-', 'LineWidth', 2);
+%plot(range_nominal, height_nominal, 'k-', 'LineWidth', 2); don't need it
 
 
 % Fitting polynomials to average trajectory
-poly_order = 5; % choosing 5 in thhis case
-p_range = polyfit(tspan, mean(range_data, 2), poly_order);
-p_height = polyfit(tspan, mean(height_data, 2), poly_order);
+t = reshape(time_data,[],1);
+
+poly_order = 5; % choosing 5 in this case
+p_range = polyfit(t, reshape(range_data,[],1), poly_order); 
+p_height = polyfit(t, reshape(height_data,[],1), poly_order);
+
+range_fit = polyval(p_range,tspan);
+height_fit = polyval(p_height,tspan);
+
+% plot of the curve fit
+plot(range_fit,height_fit,'r-',LineWidth=8);
+
 
 % Computing first time derivatives
 d_range_dt = polyder(p_range);
