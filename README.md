@@ -1,3 +1,4 @@
+
 This is a **bold** word, *italics*
 unordered list:
 - Item 1
@@ -17,7 +18,7 @@ A picture:
 # Paper Airplane Numerical Study
   Final Project: AEM 3103 Spring 2024
 
-  - By: Madhurima Das
+  - By: Madhurima Das & Jocelyn Prewett
 
   ## Summary of Findings
   <Show the variations studied in a table>
@@ -54,6 +55,4 @@ A picture:
   ## Point-Mass Animation
   <Animated GIF showing 2D trajectory for nominal and the scenario (V=7.5 m/s, Gam=+0.4 rad)>
   
-  (Below are for teams of 3 people)
-  ## Graphical Animation
-  <Same as the above animation, except that the moving *point* should be a 2D drawing of an airplane, drawn using CAD>
+  
