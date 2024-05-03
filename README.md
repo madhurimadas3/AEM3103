@@ -29,17 +29,21 @@ The height and range were observed while varying the initial vellocity and fligh
 ![Height vs Range](Figures/PartAheightvsrange.jpg)
 Height vs. Range
 
+*(The first subplot shows varying initial velocity and the second subplot shows varying flight path angle. In each plot, height and range data were plotted with varying parameter velocity and flight path angle)* 
+
   ## Fig. 2: Monte Carlo Simulation
  ![Monte Carlo simulation 100 trajectories and polyfit](Figures/PartBMonteCarlo.jpg)
 
   Monte Carlo simulation 100 trajectories and polyfit
 
  ## Fig. 3: Time Derivatives
- <Time-derivative of height and range for the fitted trajectory>
+ ![Time Derivatives](Figures/PartBTimeDerivatives.jpg)
+ 
+ Time-derivative of height and range for the fitted trajectory
 
   Briefly describe what is being shown in the figure.
 
-  (Below are for teams of 2-3 people)
+
 
   # Animation
   ## Point-Mass Animation
