@@ -75,3 +75,25 @@ global CL CD S m g rho
 
    %Save as GIF
    saveas(gcf,'AnimationGIF.gif','gif')
+
+   figure
+  
+	plot(xnom(:,4),xnom(:,3),'k')
+   title('Height vs Range')
+	xlabel('Range, m'), ylabel('Height, m'), grid
+trajectories = 100;
+   for i = 1:numel(trajectories)
+       frames(i) = getframe(gcf);
+   end
+% Create animated GIF
+filename = 'trajectory_animation.gif';
+for i = 1:numel(frames)
+   [imind, cm] = rgb2ind(frames(i).cdata, 256);
+   if i == 1
+       imwrite(imind, cm, filename, 'gif', 'Loopcount', inf, 'DelayTime', 0.5);
+   else
+       imwrite(imind, cm, filename, 'gif', 'WriteMode', 'append', 'DelayTime', 0.5);
+   end
+end
+
+
