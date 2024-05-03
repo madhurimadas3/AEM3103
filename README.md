@@ -35,7 +35,9 @@ Height vs. Range
   Monte Carlo simulation 100 trajectories and polyfit
 
  ## Fig. 3: Time Derivatives
- <Time-derivative of height and range for the fitted trajectory>
+ ! [Time Derivatives](Figures/PartBTimeDerivatives.jpg)
+ 
+ Time-derivative of height and range for the fitted trajectory
 
   Briefly describe what is being shown in the figure.
 
