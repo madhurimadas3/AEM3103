@@ -39,62 +39,14 @@ global CL CD S m g rho
 
    % Plotting trajectory
    hold on;
-   subplot(2,1,1);
    axis equal;
-   
-   
    xlabel('Range (m)'); ylabel('Height (m)'); title('2D Trajectory (Velocity)');
    
    h1 = animatedline('Color','k');
 
    % Animating trajectory
    for k = 1:length(xnom)
-       addpoints(h1,xnom(k,4),xnom(k,3));
-       drawnow
-   end
-%% Animation for velocity, Vs = 7.5 m/s
-    H		=	2;			% Initial height in meters
-	R		=	0;			% Initial range in meters
-	to		=	0;			% Initial time in seconds
-	tf		=	6;			% Final time in seconds
-	tspan	=	[to tf];
-    Vs      =   7.5;        % Given velocity in this scenario
-	xo		=	[Vs;Gam_nom;H;R];
-	[ta,xs]	=	ode23('EqMotion',tspan,xo);
-
-   % Plotting trajectory 
-   subplot(2,1,1);
-   h2 = animatedline('Color','r');
-
-   % Animating trajectory
-   for a = 1:length(xs)
-       addpoints(h2,xs(a,4),xs(a,3));
-       drawnow
-   end
-
-   % legend 
-   legend('Nominal Velocity','Vs = 7.5 m/s');
-   hold off;
-   %% Animation for nominal Flight path angle   
-	H		=	2;			% Initial height in meters
-	R		=	0;			% Initial range in meters
-	to		=	0;			% Initial time in seconds
-	tf		=	6;			% Final time in seconds
-	tspan	=	[to tf];
-	xo		=	[Vnom;Gam_nom;H;R];
-    [ta,xgnom]	= ode23('EqMotion',tspan,xo);
-
-   % Plotting trajectory 
-   hold on;
-   axis equal;
-   
-   subplot(2,1,2);
-   xlabel('Range (m)'); ylabel('Height (m)'); title('2D Trajectory(FPA)');
-   h3 = animatedline('Color','k');
-
-   % Animating trajectory
-   for c = 1:length(xgnom)
-       addpoints(h3,xgnom(c,4),xnom(c,3));
+       addpoints(h1,xnom(:,4),xnom(:,3));
        drawnow
    end
 %% Animation for Gam = +0.4 rad
@@ -103,20 +55,19 @@ global CL CD S m g rho
 	to		=	0;			% Initial time in seconds
 	tf		=	6;			% Final time in seconds
 	tspan	=	[to tf];
+    Vs      =   7.5;        % Given velocity in this scenario
     Gams    =   0.4;        % Given FPA in this scenario
-	xo		=	[Vnom;Gams;H;R];
+	xo		=	[Vs;Gams;H;R];
 	[ta,xgs]	=	ode23('EqMotion',tspan,xo);
 
    % Plotting trajectory 
-   subplot(2,1,2);
-   h4 = animatedline('Color','r');
+   h2 = animatedline('Color','r');
 
    % Animating trajectory
    for d = 1:length(xgs)
-       addpoints(h4,xgs(d,4),xgs(d,3));
+       addpoints(h2,xgs(d,4),xgs(d,3));
        drawnow
    end
 
    % legend 
-   legend('Nominal Gam','Gams = 0.4 rad');
-   hold off;
+   legend('Nominal Graph','Vs = 7.5 m/s , Gs = 0.4rad');
