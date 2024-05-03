@@ -11,7 +11,7 @@
   *If the analysis falls short of the goal, this is your chance to explain what was done or what were the barriers.*
  
   # Code Listing:
-- [./PaperPlane.m]
+- (./PaperPlane.m)
 	- Establishes Starting Variables
 - EqMotion.m
 	- Function for the equations of motions for the airplane
