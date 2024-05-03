@@ -13,13 +13,13 @@
   # Code Listing:
 - [PaperPlane.m](https://github.com/madhurimadas3/AEM3103/blob/af7bd46c4f5ee8da65c25e1c3dd182f89c386a7f/PaperPlane.m)
 	- Establishes Starting Variables
-- EqMotion.m
+- [EqMotion.m](https://github.com/madhurimadas3/AEM3103/blob/827eb4b64bd9fb1772f3257a30072cc2b40c96f3/EqMotion.m)
 	- Function for the equations of motions for the airplane
-- PartA.m
+- [PartA.m](https://github.com/madhurimadas3/AEM3103/blob/827eb4b64bd9fb1772f3257a30072cc2b40c96f3/PartA.m)
 	- Code for the first set of graphs showing Height vs. Range while varying first initial velocity and then gamma
-- PartB.m
+- [PartB.m](https://github.com/madhurimadas3/AEM3103/blob/827eb4b64bd9fb1772f3257a30072cc2b40c96f3/PartB.m)
 	- Code for the second set of graphs showing the variations of velocity and gamma with a (red) curve fit, then showing dR/dt over time and dH/dt over time.
-- Animation.m
+- [Animation.m](https://github.com/madhurimadas3/AEM3103/blob/827eb4b64bd9fb1772f3257a30072cc2b40c96f3/Animation.m)
 	- Code to create a GIF of V=7.5 and gamma = 0.4 against the nominal line
 
   # Figures
