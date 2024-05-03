@@ -27,7 +27,10 @@ The height and range were observed while varying the initial vellocity and fligh
 
   ## Fig. 1: Single Parameter Variation
 ![Height vs Range](Figures/PartAheightvsrange.jpg)
-Height vs. Range
+
+Height vs. Range plots 
+1. Height vs Range over varying initial velocities
+2. Height vs Range over varying flight path angle(Gamma)
 
 *(The first subplot shows varying initial velocity and the second subplot shows varying flight path angle. In each plot, height and range data were plotted with varying parameter velocity and flight path angle)* 
 
