@@ -76,7 +76,7 @@ range_fit = polyval(p_range,tspan);
 height_fit = polyval(p_height,tspan);
 
 % plot of the curve fit
-plot(range_fit,height_fit,'r-',LineWidth=8);
+plot(range_fit,height_fit,'r-',LineWidth=3);
 
 
 % Computing first time derivatives
