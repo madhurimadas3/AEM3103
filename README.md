@@ -11,7 +11,7 @@
   *If the analysis falls short of the goal, this is your chance to explain what was done or what were the barriers.*
  
   # Code Listing:
-- PaperPlane.m 
+- ./PaperPlane.m
 	- Establishes Starting Variables
 - EqMotion.m
 	- Function for the equations of motions for the airplane
@@ -26,9 +26,7 @@
 
   ## Fig. 1: Single Parameter Variation
 ![Height vs Range](./Figures/'PartAheightvsrange.jpg')
-
-
-  Briefly describe what is being shown in the figure.
+Height vs. 
 
   ## Fig. 2: Monte Carlo Simulation
   <2D trajectories simulated using random sampling of parameters, overlay polynomial fit onto plot.>
