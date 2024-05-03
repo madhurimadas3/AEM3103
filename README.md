@@ -25,7 +25,7 @@
   # Figures
 
   ## Fig. 1: Single Parameter Variation
-![Height vs Range](./Figures/'PartAheightvsrange.jpg')
+![Height vs Range](Figures/PartAheightvsrange.jpg)
 Height vs. 
 
   ## Fig. 2: Monte Carlo Simulation
