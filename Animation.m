@@ -38,6 +38,7 @@ global CL CD S m g rho
 	[ta,xnom]	=	ode23('EqMotion',tspan,xo);
 
    % Plotting trajectory
+   figure;
    hold on;
    axis equal;
    xlabel('Range (m)'); ylabel('Height (m)'); title('2D Trajectory (Velocity)');
@@ -71,3 +72,6 @@ global CL CD S m g rho
 
    % legend 
    legend('Nominal Graph','Vs = 7.5 m/s , Gs = 0.4rad');
+
+   %Save as GIF
+   saveas(gcf,'AnimationGIF.gif','gif')
