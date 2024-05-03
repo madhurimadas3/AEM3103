@@ -77,11 +77,13 @@
     subplot(2,1,1);
 	plot(xnom(:,4),xnom(:,3),'k',xmin(:,4),xmin(:,3),'r',xmax(:,4),xmax(:,3),'g')
     title('Height vs Range')
+    legend('nominal','Low','High')
 	xlabel('Range, m'), ylabel('Height, m'), grid
     subplot(2,1,2);
     plot(xgnom(:,4),xgnom(:,3),'k',xgmin(:,4),xgmin(:,3),'r',xgmax(:,4),xgmax(:,3),'g')
     title('Height vs Range')
 	xlabel('Range, m'), ylabel('Height, m'), grid
+    legend('nominal','Low','High')
 
 
 
