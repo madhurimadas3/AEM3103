@@ -13,21 +13,21 @@
   # Code Listing
 
 Unordered List:
-PaperPlane.m 
-Establishes Starting Variables
-EqMotion.m
-Function for the equations of motions for the airplane
-PartA.m
-Code for the first set of graphs showing Height vs. Range while varying first initial velocity and then gamma
-PartB.m
-Code for the second set of graphs showing the variations of velocity and gamma with a (red) curve fit, then showing dR/dt over time and dH/dt over time.
-Animation.m
-Code to create a GIF of V=7.5 and gamma = 0.4 against the nominal line
+-PaperPlane.m 
+	-Establishes Starting Variables
+-EqMotion.m
+	-Function for the equations of motions for the airplane
+-PartA.m
+	-Code for the first set of graphs showing Height vs. Range while varying first initial velocity and then gamma
+-PartB.m
+	-Code for the second set of graphs showing the variations of velocity and gamma with a (red) curve fit, then showing dR/dt over time and dH/dt over time.
+-Animation.m
+	-Code to create a GIF of V=7.5 and gamma = 0.4 against the nominal line
 
   # Figures
 
   ## Fig. 1: Single Parameter Variation
-./Figures/PartAheightvsrange.jpg
+./Figures/'PartAheightvsrange.jpg'
 
   Briefly describe what is being shown in the figure.
 
