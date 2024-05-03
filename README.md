@@ -10,13 +10,11 @@
 
   *If the analysis falls short of the goal, this is your chance to explain what was done or what were the barriers.*
  
-  # Code Listing
-
-Unordered List:
+  # Code Listing:
 - PaperPlane.m 
 	- Establishes Starting Variables
 - EqMotion.m
-	-Function for the equations of motions for the airplane
+	- Function for the equations of motions for the airplane
 - PartA.m
 	- Code for the first set of graphs showing Height vs. Range while varying first initial velocity and then gamma
 - PartB.m
@@ -27,7 +25,8 @@ Unordered List:
   # Figures
 
   ## Fig. 1: Single Parameter Variation
-./Figures/'PartAheightvsrange.jpg'
+![Height vs Range](./Figures/'PartAheightvsrange.jpg')
+
 
   Briefly describe what is being shown in the figure.
 
