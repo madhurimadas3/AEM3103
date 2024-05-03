@@ -1,23 +1,5 @@
-
-This is a **bold** word, *italics*
-unordered list:
-- Item 1
-- Item 2
-  - Subitem
-
-ordered list: 
-1. Item A
-2. Item B
-
-link : [UMN Website](https://www.umn.edu).
-
-A picture:
-![alternative text](./figs/figureA.jpg)
-
-
 # Paper Airplane Numerical Study
   Final Project: AEM 3103 Spring 2024
-
   - By: Madhurima Das & Jocelyn Prewett
 
   ## Summary of Findings
@@ -29,13 +11,23 @@ A picture:
   *If the analysis falls short of the goal, this is your chance to explain what was done or what were the barriers.*
  
   # Code Listing
-  A list of each function/script and a single-line description of what it does.  The name of the function/script should link to the file in the repository on GitHub.
+
+Unordered List:
+PaperPlane.m 
+Establishes Starting Variables
+EqMotion.m
+Function for the equations of motions for the airplane
+PartA.m
+Code for the first set of graphs showing Height vs. Range while varying first initial velocity and then gamma
+PartB.m
+Code for the second set of graphs showing the variations of velocity and gamma with a (red) curve fit, then showing dR/dt over time and dH/dt over time.
+Animation.m
+Code to create a GIF of V=7.5 and gamma = 0.4 against the nominal line
 
   # Figures
 
   ## Fig. 1: Single Parameter Variation
-  <2D trajectory simulated by varying single parameter at at time>
-  <The above plot should also show the nominal trajectory>
+./Figures/PartAheightvsrange.jpg
 
   Briefly describe what is being shown in the figure.
 
@@ -56,3 +48,5 @@ A picture:
   <Animated GIF showing 2D trajectory for nominal and the scenario (V=7.5 m/s, Gam=+0.4 rad)>
   
   
+
+
