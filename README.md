@@ -5,6 +5,7 @@
   ## Summary of Findings
   <Show the variations studied in a table>
 The height and range were observed while varying the initial vellocity and flight path angle(Gamma). Afterwards, 100 possible trajectories were plotted and a curve fit was applied which captures the avergae of the 100 trajectories. The first derivative of Range vs time and the first derivative of Height vs time plots imply the change in the range and height over time from the fitted line. 
+
   Summarized what was accomplished in this study.  Describe 2-4 observations from simulating the flight path.
   Reference the figures below as needed.
 
@@ -26,12 +27,12 @@ The height and range were observed while varying the initial vellocity and fligh
 
   ## Fig. 1: Single Parameter Variation
 ![Height vs Range](Figures/PartAheightvsrange.jpg)
-Height vs. 
+Height vs. Range
 
   ## Fig. 2: Monte Carlo Simulation
-  <2D trajectories simulated using random sampling of parameters, overlay polynomial fit onto plot.>
+ ![Monte Carlo simulation 100 trajectories and polyfit](Figures/PartBMonteCarlo.jpg)
 
-  Briefly describe what is being shown in the figure.
+  Monte Carlo simulation 100 trajectories and polyfit
 
  ## Fig. 3: Time Derivatives
  <Time-derivative of height and range for the fitted trajectory>
