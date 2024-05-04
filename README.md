@@ -8,19 +8,19 @@ In this project, we analyzed the flight path of a paper airplane using equations
 
 
 ## Summary of Height Vs. Range Plots 
- 
-| **Graph Description**                  | **Line Color/Description**  | **Initial Velocity Value** | **Initial Velocity Description** | **Flight Path Angle Value** | **Flight Path Angle Description** |
-| Single Parameter Variation Graph 1 | Black                   |                 3.5494 | Nominal Value                |                 -0.1794 | Nominal Value                 |
-| Single Parameter Variation Graph 1 | Red                     |                      2 | Min Value                    |                 -0.1794 | Min Value                     |
-| Single Parameter Variation Graph 1 | Green                   |                    7.5 | Max Value                    |                 -0.1794 | Max Value                     |
-| Single Parameter Variation Graph 2 | Black                   |                 3.5494 | Nominal Value                |                 -0.1794 | Nominal Value                 |
-| Single Parameter Variation Graph 2 | Red                     |                 3.5494 | Min Value                    |                    -0.5 | Min Value                     |
-| Single Parameter Variation Graph 2 | Green                   |                 3.5494 | Max Value                    |                     0.4 | Max Value                     |
-| Monte Carlo Simulation             | Blue (100 Trajectories) | N/A                    | Random Values                | N/A                     | Random Values                 |
-| Monte Carlo Simulation             | Red                     |      Generated values by MATLAB                  | Avg of Random values         | Generated values by MATLAB                        | Avg of Random                  |
-| Animated Plot                      | Black                   |                 3.5494 | Nominal Value                |                 -0.1794 | Nominal Value                 |
-| Animated Plot                      | Blue                    |                    7.5 | Given Value                  |                     0.4 | Given Value                   |
-| Animated Plot                      | Red(dot)                |                    7.5 | Given Value                  |                     0.4 | Given Value                   | 
+|          Graph Description         |  Line Color/Description |   Initial Velocity Value   | Initial Velocity Description |   Flight Path Angle Value  | Flight Path Angle Description |
+|:----------------------------------:|:-----------------------:|:--------------------------:|:----------------------------:|:--------------------------:|:-----------------------------:|
+| Single Parameter Variation Graph 1 | Black                   | 3.5494                     | Nominal Value                | -0.1794                    | Nominal Value                 |
+| Single Parameter Variation Graph 1 | Red                     | 2                          | Min Value                    | -0.1794                    | Min Value                     |
+| Single Parameter Variation Graph 1 | Green                   | 7.5                        | Max Value                    | -0.1794                    | Max Value                     |
+| Single Parameter Variation Graph 2 | Black                   | 3.5494                     | Nominal Value                | -0.1794                    | Nominal Value                 |
+| Single Parameter Variation Graph 2 | Red                     | 3.5494                     | Min Value                    | -0.5                       | Min Value                     |
+| Single Parameter Variation Graph 2 | Green                   | 3.5494                     | Max Value                    | 0.4                        | Max Value                     |
+| Monte Carlo Simulation             | Blue (100 Trajectories) | N/A                        | Random Values                | N/A                        | Random Values                 |
+| Monte Carlo Simulation             | Red                     | Generated values by MATLAB | Avg of Random values         | Generated values by MATLAB | Avg of Random                 |
+| Animated Plot                      | Black                   | 3.5494                     | Nominal Value                | -0.1794                    | Nominal Value                 |
+| Animated Plot                      | Blue                    | 7.5                        | Given Value                  | 0.4                        | Given Value                   |
+| Animated Plot                      | Red(dot)                | 7.5                        | Given Value                  | 0.4                        | Given Value                   |
 
 # Code Listing:
 - [PaperPlane.m](https://github.com/madhurimadas3/AEM3103/blob/af7bd46c4f5ee8da65c25e1c3dd182f89c386a7f/PaperPlane.m)
