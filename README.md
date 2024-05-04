@@ -7,9 +7,9 @@
 In this project, we analyzed the flight path of a paper airplane using equations of motion along varying flight path angle and initial velocity values. In the first part (Part A), height and range were observed while first varying initial vellocity and then varying flight path angle(Gamma) in a second plot. These plots show how making individual changes to the initial conditions of flight affect the flight path. In the second part (Part B), were were able to use a random number generator to plot 100 possible trajectories. Then an average curve-fit was found and plotted against these predictions to come up with an average prediction of flight path over varying conditions. The first derivative of Range vs time and the first derivative of Height vs time plots imply the change in the range and height over time from the fitted line thus showing the slope of the curve-fit line. Finally, the animated plot GIF shows the predicted flight path for the given conditions and the moving dot indicates the location of the paper airplane over a time period of 6 seconds. 
 
 
- | Summary of Height Vs. Range Plots  |                         |                        |                              |                         |                               |
-|------------------------------------|-------------------------|------------------------|------------------------------|-------------------------|-------------------------------|
-| Graph Description                  | Line Color/Description  | Initial Velocity Value | Initial Velocity Description | Flight Path Angle Value | Flight Path Angle Description |
+## Summary of Height Vs. Range Plots 
+ 
+| **Graph Description**                  | **Line Color/Description**  | **Initial Velocity Value** | **Initial Velocity Description** | **Flight Path Angle Value** | **Flight Path Angle Description** |
 | Single Parameter Variation Graph 1 | Black                   |                 3.5494 | Nominal Value                |                 -0.1794 | Nominal Value                 |
 | Single Parameter Variation Graph 1 | Red                     |                      2 | Min Value                    |                 -0.1794 | Min Value                     |
 | Single Parameter Variation Graph 1 | Green                   |                    7.5 | Max Value                    |                 -0.1794 | Max Value                     |
@@ -17,7 +17,7 @@ In this project, we analyzed the flight path of a paper airplane using equations
 | Single Parameter Variation Graph 2 | Red                     |                 3.5494 | Min Value                    |                    -0.5 | Min Value                     |
 | Single Parameter Variation Graph 2 | Green                   |                 3.5494 | Max Value                    |                     0.4 | Max Value                     |
 | Monte Carlo Simulation             | Blue (100 Trajectories) | N/A                    | Random Values                | N/A                     | Random Values                 |
-| Monte Carlo Simulation             | Red                     |                        | Avg of Random values         |                         | Avg of Ranom                  |
+| Monte Carlo Simulation             | Red                     |      Generated values by MATLAB                  | Avg of Random values         | Generated values by MATLAB                        | Avg of Random                  |
 | Animated Plot                      | Black                   |                 3.5494 | Nominal Value                |                 -0.1794 | Nominal Value                 |
 | Animated Plot                      | Blue                    |                    7.5 | Given Value                  |                     0.4 | Given Value                   |
 | Animated Plot                      | Red(dot)                |                    7.5 | Given Value                  |                     0.4 | Given Value                   | 
