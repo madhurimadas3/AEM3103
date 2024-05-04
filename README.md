@@ -21,7 +21,7 @@ The height and range were observed while varying the initial vellocity and fligh
 - [PartB.m](https://github.com/madhurimadas3/AEM3103/blob/827eb4b64bd9fb1772f3257a30072cc2b40c96f3/PartB.m)
 	- Code for the second set of graphs showing the variations of velocity and gamma with a (red) curve fit, then showing dR/dt over time and dH/dt over time.
 - [Animation.m](https://github.com/madhurimadas3/AEM3103/blob/827eb4b64bd9fb1772f3257a30072cc2b40c96f3/Animation.m)
-	- Code to create a GIF of V=7.5 and gamma = 0.4 against the nominal line
+	- Code to create a GIF of V=7.5 m/s and gamma = 0.4 rad against the nominal line
 
   # Figures
 
