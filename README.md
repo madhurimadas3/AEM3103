@@ -39,14 +39,14 @@ Height vs. Range plots
 
   Monte Carlo simulation 100 trajectories and polyfit
 
-  *(The plot shows Height vs. Range and this is done by creating 100 trajectories by using random initial velocities and flight path angles. This plot shows all the possibilites of 100 random trajecories over 6 seconds of time. A polynomial fit was applied to have an approximation of the average trajectories. The curve in red is the fitted curve.)*
+  *(The plot shows Height vs. Range and this is done by creating 100 trajectories by using random initial velocities and flight path angles. This plot shows all the possibilites of 100 random trajecories over 6 seconds of time. A polynomial fit was applied to have an approximation of the average trajectory. The curve in red is the fitted curve.)*
 
  ## Fig. 3: Time Derivatives
  ![Time Derivatives](Figures/PartBTimeDerivatives.jpg)
  
  Time-derivative of height and range for the fitted trajectory
 
- *(The time derivatives are of the fitted curve and shows the change)*
+ *(The time derivatives are of the fitted curve and shows the change in height and range over time ie giving the slope of the average trajectory plotted in red on the Monte Carlo Simulation)*
 
 
 
@@ -55,6 +55,6 @@ Height vs. Range plots
   ## Point-Mass Animation
   ![Point-Mass Animation](Figures/animated_plot.gif)
   
-  
+ This graph shows the nominal trajectory in black against the plotted trajectory at an initial velocity of 7.5 meters per second and a flight path angle of 0.4 radians. The dotted animation shows the predicted flight path for a paper airplane under the given conditions. 
 
 
