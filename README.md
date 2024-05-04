@@ -53,7 +53,7 @@ Height vs. Range plots
 
   # Animation
   ## Point-Mass Animation
-  <Animated GIF showing 2D trajectory for nominal and the scenario (V=7.5 m/s, Gam=+0.4 rad)>
+  ![Point-Mass Animation](Figures/animated_plot.gif)
   
   
 
