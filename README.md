@@ -39,7 +39,7 @@ Height vs. Range plots
 
   Monte Carlo simulation 100 trajectories and polyfit
 
-  *(The plot shows Height vs. Range and this is done by creating 100 trajectories by using random initial velocities and flight path angles. This plot shows all the possibilites of 100 random trajecories over 6 seconds of time. A polynomial fit was applied to have an approximation of the average trajectories.)*
+  *(The plot shows Height vs. Range and this is done by creating 100 trajectories by using random initial velocities and flight path angles. This plot shows all the possibilites of 100 random trajecories over 6 seconds of time. A polynomial fit was applied to have an approximation of the average trajectories. The curve in red is the fitted curve.)*
 
  ## Fig. 3: Time Derivatives
  ![Time Derivatives](Figures/PartBTimeDerivatives.jpg)
