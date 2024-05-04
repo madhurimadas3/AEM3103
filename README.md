@@ -2,10 +2,10 @@
   Final Project: AEM 3103 Spring 2024
   - By: Madhurima Das & Jocelyn Prewett
 
-  ## Summary of Findings
+# Summary of Findings
   
 
-# Variations Studied : Summary of Height Vs. Range Plots 
+## Variations Studied : Summary of Height Vs. Range Plots 
 |          Graph Description         |  Line Color/Description |   Initial Velocity Value   | Initial Velocity Description |   Flight Path Angle Value  | Flight Path Angle Description |
 |:----------------------------------:|:-----------------------:|:--------------------------:|:----------------------------:|:--------------------------:|:-----------------------------:|
 | Single Parameter Variation Graph 1 | Black                   | 3.5494                     | Nominal Value                | -0.1794                    | Nominal Value                 |
