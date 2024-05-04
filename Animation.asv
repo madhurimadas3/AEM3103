@@ -46,45 +46,46 @@ global CL CD S m g rho
 	[ta,xgs]	=	ode23('EqMotion',tspan,xo);
 
 %%   Create and save GIF
-%   Create a figure
-    figure;
-    hold on;    
+
+% Create a figure
+figure;
+hold on;
+
 % Plot the xnom data
-    plot(xnom(:,4),xnom(:,3), 'k', 'DisplayName', 'xnom');
+plot(xnom(:,4),xnom(:,3), 'k', 'DisplayName', 'xnom');
+
 % Initialize the dot
-    dotHandle = plot(xgs(1,4),xgs(1,3), 'ro', 'MarkerSize', 2, 'DisplayName', 'Moving Dot');
-% Set axis limits(Size of Graph)
-    xlim([min(xnom(:,4)+3), max(xnom(:,4)+3)]);
-    ylim([min(xnom(:,3)), max(xnom(:,3))]);
+dotHandle = plot(xgs(1,4),xgs(1,3), 'ro', 'MarkerSize', 10, 'DisplayName', 'Moving Dot');
+
+% Set axis limits
+xlim([min(xnom(:,4)), max(xnom(:,4))]);
+ylim([min(xnom(:,3)), max(xnom(:,3))]);
+
 % Add labels and legend
-    xlabel('Height');
-    ylabel('Range');
-    title('Animated Plot');
-    legend('Location', 'best');
-% GIF variables
-    filename = 'animated_plot.gif';
-    frameRate = 30;  % Frames per second
-    numFrames = length(xgs(:,4));
-    delayTime = 1 / frameRate;  
+xlabel('Height');
+ylabel('Range');
+title('Animated Plot');
+legend('Location', 'best');
+
 % Create the animation
-    for i = 1:numFrames
+for i = 2:length(xgs)
     % Update the dot position
-        set(dotHandle, 'XData', xgs(i,4), 'YData', xgs(i,3));
-        drawnow; 
-        pause(0.05);  % Pause for a short duration
-    % Save as a GIF
-        frame = getframe(gcf);
-        im = frame2im(frame);
-        [imIndexed, map] = rgb2ind(im, 256);
-    % Append the frame to the GIF file
-        if i == 1
-            imwrite(imIndexed, map, filename, 'gif', 'LoopCount', Inf, 'DelayTime', delayTime);
-        else
-            imwrite(imIndexed, map, filename, 'gif', 'WriteMode', 'append', 'DelayTime', delayTime);
-        end
-    end
-    disp(['Animated GIF saved as "', filename, '"']);
-    hold off;
-    
-    
+    set(dotHandle, 'XData', xgs(i), 'YData', ygs(i));
+    drawnow;  % Force immediate update of the plot
+    pause(0.05);  % Pause for a short duration (adjust as needed)
+end
+
+% Save the animation as a GIF
+filename = 'animated_plot.gif';
+frame = getframe(gcf);
+im = frame2im(frame);
+[imIndexed, map] = rgb2ind(im, 256);
+imwrite(imIndexed, map, filename, 'gif', 'LoopCount', Inf, 'DelayTime', 0.05);
+
+disp(['Animated GIF saved as "', filename, '"']);
+
+% Clean up
+hold off;
+
+
 
