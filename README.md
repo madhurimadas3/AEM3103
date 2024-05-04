@@ -3,11 +3,9 @@
   - By: Madhurima Das & Jocelyn Prewett
 
   ## Summary of Findings
-  <Show the variations studied in a table>
-In this project, we analyzed the flight path of a paper airplane using equations of motion along varying flight path angle and initial velocity values. In the first part (Part A), height and range were observed while first varying initial vellocity and then varying flight path angle(Gamma) in a second plot. These plots show how making individual changes to the initial conditions of flight affect the flight path. In the second part (Part B), were were able to use a random number generator to plot 100 possible trajectories. Then an average curve-fit was found and plotted against these predictions to come up with an average prediction of flight path over varying conditions. The first derivative of Range vs time and the first derivative of Height vs time plots imply the change in the range and height over time from the fitted line thus showing the slope of the curve-fit line. Finally, the animated plot GIF shows the predicted flight path for the given conditions and the moving dot indicates the location of the paper airplane over a time period of 6 seconds. 
+  
 
-
-## Summary of Height Vs. Range Plots 
+# Variations Studied : Summary of Height Vs. Range Plots 
 |          Graph Description         |  Line Color/Description |   Initial Velocity Value   | Initial Velocity Description |   Flight Path Angle Value  | Flight Path Angle Description |
 |:----------------------------------:|:-----------------------:|:--------------------------:|:----------------------------:|:--------------------------:|:-----------------------------:|
 | Single Parameter Variation Graph 1 | Black                   | 3.5494                     | Nominal Value                | -0.1794                    | Nominal Value                 |
@@ -21,6 +19,10 @@ In this project, we analyzed the flight path of a paper airplane using equations
 | Animated Plot                      | Black                   | 3.5494                     | Nominal Value                | -0.1794                    | Nominal Value                 |
 | Animated Plot                      | Blue                    | 7.5                        | Given Value                  | 0.4                        | Given Value                   |
 | Animated Plot                      | Red(dot)                | 7.5                        | Given Value                  | 0.4                        | Given Value                   |
+
+<Show the variations studied in a table>
+In this project, we analyzed the flight path of a paper airplane using equations of motion along varying flight path angle and initial velocity values. In the first part (Part A), height and range were observed while first varying initial vellocity and then varying flight path angle(Gamma) in a second plot. These plots show how making individual changes to the initial conditions of flight affect the flight path. In the second part (Part B), were were able to use a random number generator to plot 100 possible trajectories. Then an average curve-fit was found and plotted against these predictions to come up with an average prediction of flight path over varying conditions. The first derivative of Range vs time and the first derivative of Height vs time plots imply the change in the range and height over time from the fitted line thus showing the slope of the curve-fit line. Finally, the animated plot GIF shows the predicted flight path for the given conditions and the moving dot indicates the location of the paper airplane over a time period of 6 seconds. 
+
 
 # Code Listing:
 - [PaperPlane.m](https://github.com/madhurimadas3/AEM3103/blob/af7bd46c4f5ee8da65c25e1c3dd182f89c386a7f/PaperPlane.m)
