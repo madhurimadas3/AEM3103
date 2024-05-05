@@ -51,18 +51,16 @@ global CL CD S m g rho
     hold on;    
 % Plot the xnom data
     plot(xnom(:,4),xnom(:,3), 'k', 'DisplayName', 'xnom');
+    plot(xgs(:,4),xgs(:,3),'b','DisplayName','xgs');
 % Initialize the dot
-    dotHandle = plot(xgs(1,4),xgs(1,3), 'r*', 'MarkerSize', 2, 'DisplayName', 'Moving Dot');
+    dotHandle = plot(xgs(1,4),xgs(1,3), 'r*', 'MarkerSize', 5, 'DisplayName', 'Moving Dot');
 % Set axis limits(Size of Graph)
-    %xlim([min(xnom(:,4)+3), max(xnom(:,4)+3)]);
-    %ylim([min(xnom(:,3)), max(xnom(:,3))]);
-    xlim([min(xnom(:,3)+4), max(xnom(:,3)+4)]);
-    ylim([min(xnom(:,4)), max(xnom(:,4))]);
+    xlim([min(xnom(:,4)-1), max(xnom(:,4))]);
+    ylim([min(xnom(:,3)-2), max(xnom(:,3)2)]);
+    
 % Add labels and legend
-    %xlabel('Height');
-    %ylabel('Range');
     xlabel('Range');
-    ylabel('he');
+    ylabel('Height');
     title('Animated Plot');
     legend('Location', 'best');
 % GIF variables

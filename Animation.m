@@ -55,8 +55,8 @@ global CL CD S m g rho
 % Initialize the dot
     dotHandle = plot(xgs(1,4),xgs(1,3), 'r*', 'MarkerSize', 5, 'DisplayName', 'Moving Dot');
 % Set axis limits(Size of Graph)
-    xlim([min(xnom(:,4)+3), max(xnom(:,4)+3)]);
-    ylim([min(xnom(:,3)), max(xnom(:,3))]);
+    xlim([min(xnom(:,4)-1), max(xnom(:,4))]);
+    ylim([min(xnom(:,3)-2), max(xnom(:,3)+3)]);
     
 % Add labels and legend
     xlabel('Range');
