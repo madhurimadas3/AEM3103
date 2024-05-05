@@ -43,8 +43,10 @@ In this project, we analyzed the flight path of a paper airplane using equations
 ![Height vs Range](Figures/PartAheightvsrange.jpg)
 
 Figure 1: Height vs. Range plots 
-          1. Height vs Range over varying initial velocities
-          2. Height vs Range over varying flight path angle(Gamma)
+1. Height vs Range over varying initial velocities
+2. Height vs Range over varying flight path angle(Gamma)
+         
+          
 
 *(The first subplot shows varying initial velocity and the second subplot shows varying flight path angle. In each plot, height and range data were plotted with varying parameter velocity and flight path angle)* 
 
