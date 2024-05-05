@@ -42,25 +42,25 @@ In this project, we analyzed the flight path of a paper airplane using equations
   ## Fig. 1: Single Parameter Variation
 ![Height vs Range](Figures/PartAheightvsrange.jpg)
 
-Height vs. Range plots 
-1. Height vs Range over varying initial velocities
-2. Height vs Range over varying flight path angle(Gamma)
+Figure 1: Height vs. Range plots 
+          1. Height vs Range over varying initial velocities
+          2. Height vs Range over varying flight path angle(Gamma)
 
 *(The first subplot shows varying initial velocity and the second subplot shows varying flight path angle. In each plot, height and range data were plotted with varying parameter velocity and flight path angle)* 
 
   ## Fig. 2: Monte Carlo Simulation
  ![Monte Carlo simulation 100 trajectories and polyfit](Figures/PartBMonteCarlo.jpg)
 
-  Monte Carlo simulation 100 trajectories and polyfit
+ Figure 2:  Monte Carlo simulation 100 trajectories and polyfit
 
   *(The plot shows Height vs. Range and this is done by creating 100 trajectories by using random initial velocities and flight path angles. This plot shows all the possibilites of 100 random trajecories over 6 seconds of time. A polynomial fit was applied to have an approximation of the average trajectory. The curve in red is the fitted curve.)*
 
  ## Fig. 3: Time Derivatives
  ![Time Derivatives](Figures/PartBTimeDerivatives.jpg)
  
- Time-derivative of height and range for the fitted trajectory
+ Figure 3: Time-derivative of height and range for the fitted trajectory
 
- *(The time derivatives are of the fitted curve and shows the change in height and range over time ie giving the slope of the average trajectory plotted in red on the Monte Carlo Simulation)*
+ *(The time derivatives are of the fitted curve and shows the change in range and height over time giving the slope of the average trajectory plotted in red on the Monte Carlo Simulation)*
 
 
 
